@@ -12,38 +12,39 @@ let letter_content = document.getElementById('ctn-letter');
 
 function open_letter() {
     letter.style.transform = 'translateY(-10px)';
-    triangle_top.style.zIndex = '11';
-    triangle_top.style.transform = 'rotateX(1turn) translateY(-109px)';
+    triangle_top.style.transition = 'transform 400ms'
+    triangle_top.style.zIndex = '6';
+    triangle_top.style.transform = 'rotateX(1turn) translateY(-110px)';
     triangle_top.style.filter = 'drop-shadow(1px -3px 0 #c7679f)';
     
-    if (triangle_top.style.zIndex == '11') {
+    if (triangle_top.style.zIndex == '6') {
+        hearth.style.zIndex = '5'
         hearth.style.transform = 'translateY(-205px) rotateX(0.5turn)';
         hearth.style.filter = 'drop-shadow(1px 3px 0 #844b94)';
     }
 
-    if (triangle_top.style.transform == 'rotateX(1turn) translateY(-109px)') {
-        letter_content.style.zIndex = '12'
-        letter_content.style.transform = 'scale(1.8)';
+    if (triangle_top.style.transform == 'rotateX(1turn) translateY(-110px)') {
+        letter_content.style.animationName = 'test'; 
     }
 }
 //#endregion
 
 //#region Change Content
-document.getElementById('arrow-left').addEventListener('click', show)
-document.getElementById('arrow-right').addEventListener('click', hide);
+document.getElementById('arrow-left').addEventListener('click', show_container)
+document.getElementById('arrow-right').addEventListener('click', hide_container);
 
 let arrow_left = document.getElementById('arrow-left');
 let arrow_right = document.getElementById('arrow-right');
 let img_container = document.getElementById('img-container');
 
-function hide() {
+function hide_container() {
     arrow_left.style.opacity = '1';
     arrow_right.style.opacity = '0'
-    img_container.style.transform = 'translateX(280px)';
+    img_container.style.transform = 'translateX(-470px)';
     img_container.style.opacity = '0';
 }
 
-function show() {
+function show_container() {
     arrow_right.style.opacity = '1';
     arrow_left.style.opacity = '0';
     if (arrow_left.style.opacity == '0') {
