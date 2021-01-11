@@ -11,14 +11,16 @@ body {
 }
 
 #flex-container {
-    height: 90vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
-    transition: all 500ms;
+    transform: translateY(-15px);
+    transition: transform 500ms;
+    overflow: hidden;
 }
 
 #flex-container:hover {
-    transform: translateY(-15px);
+    transform: translateY(-25px)
 }
 
 #letter {
@@ -35,13 +37,13 @@ body {
 
 #triangle-top {
     position: absolute;
-    top: 145px;
+    top: 144px;
     border-right: 151px solid transparent;
     border-bottom: 115px solid #e97cbb;
     border-left: 151px solid transparent;
     transform: rotateX(0.5turn);
     filter: drop-shadow(0 -3px 0 #c7679f);
-    transition: all 800ms;
+    transition: transform 700ms;
     z-index: 9;
 }
 
@@ -60,7 +62,7 @@ body {
     position: absolute;
     top: 225px;
     filter: drop-shadow(3px 0 0 #844b94);
-    transition: all 700ms;
+    transition: transform 700ms 100ms;
     z-index: 10;
 }
 
@@ -100,10 +102,47 @@ body {
     position: absolute;
     top: 158px;
     display: flex;
-    flex-wrap: wrap;
     background: #ffffff;
-    transition: all 1s;
+    transition: transform 800ms 500ms;
     z-index: 5;
+}
+
+#img-container {
+    width: 100%;
+    padding: 3px;
+    background: #ffffff;
+    transition: transform 700ms, opacity 500ms 700ms;
+}
+
+#img-container img {
+    width: 70px;
+    height: 70px;
+}
+
+.btn-container {
+    width: 15%;
+    margin-left: 10px;
+    padding-right: 3px;
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    z-index: 20;
+}
+
+.btn-container button {
+    color: #e97cbb;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+#arrow-left {
+    transition: opacity 700ms;
+    opacity: 0;
+}
+
+#arrow-right {
+    transition: opacity 800ms;
 }
 
 h1 {
