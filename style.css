@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: '', sans-serif;
+}
+
+body {
+    background: #eeb3ff;
+}
+
+#flex-container {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms;
+}
+
+#flex-container:hover {
+    transform: translateY(-15px);
+}
+
+#letter {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 25px;
+    background: #ececec;
+    overflow: hidden;
+}
+
+#triangle-top {
+    position: absolute;
+    top: 226px;
+    border-right: 151px solid transparent;
+    border-bottom: 115px solid #e97cbb;
+    border-left: 151px solid transparent;
+    transform: rotateX(0.5turn);
+    filter: drop-shadow(0 -3px 0 #c7679f);
+    transition: all 800ms;
+    z-index: 9;
+}
+
+.triangle-left {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    border-top: 100px solid transparent;
+    border-left: 150px solid #e97cbb;
+    border-bottom: 100px solid transparent;
+    z-index: 6; 
+}
+
+#hearth {
+    width: 50px;
+    position: absolute;
+    top: 225px;
+    filter: drop-shadow(3px 0 0 #844b94);
+    transition: all 700ms;
+    z-index: 10;
+}
+
+.triangle-right {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    border-top: 100px solid transparent;
+    border-right: 150px solid #e97cbb;
+    border-bottom: 100px solid transparent;
+    z-index: 6;
+}
+
+.triangle-bottom-1 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-left: 150px solid transparent;
+    border-bottom: 100px solid #e97cbb;
+    filter: drop-shadow(-8px 1px 0 #d36fa9);
+    z-index: 7;
+}
+
+.triangle-bottom-2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-right: 150px solid transparent;
+    border-bottom: 100px solid #e97cbb;
+    filter: drop-shadow(8px 1px 0 #d36fa9);
+    z-index: 7;
+}
+
+#ctn-letter {
+    width: 270px;
+    height: 180px;
+    position: absolute;
+    top: 158px;
+    display: flex;
+    flex-wrap: wrap;
+    background: #ffffff;
+    transition: all 1s;
+    z-index: 5;
+}
+
+h1 {
+    color: #e0138b;
+    text-align: center;
+}
