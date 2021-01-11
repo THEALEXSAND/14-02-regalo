@@ -14,7 +14,6 @@ body {
     height: 90vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     transition: all 500ms;
 }
 
@@ -29,14 +28,14 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 25px;
+    top: 145px;
     background: #ececec;
     overflow: hidden;
 }
 
 #triangle-top {
     position: absolute;
-    top: 226px;
+    top: 145px;
     border-right: 151px solid transparent;
     border-bottom: 115px solid #e97cbb;
     border-left: 151px solid transparent;
