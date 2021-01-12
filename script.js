@@ -9,9 +9,10 @@ let letter = document.getElementById('flex-container');
 let triangle_top = document.getElementById('triangle-top');
 let hearth = document.getElementById('hearth');
 let letter_content = document.getElementById('ctn-letter');
+let btn_container = document.getElementById('btn-container');
 
 function open_letter() {
-    letter.style.transform = 'translateY(-10px)';
+    letter.style.transform = 'translateY(10px)';
     triangle_top.style.transition = 'transform 400ms'
     triangle_top.style.zIndex = '6';
     triangle_top.style.transform = 'rotateX(1turn) translateY(-110px)';
@@ -24,33 +25,40 @@ function open_letter() {
     }
 
     if (triangle_top.style.transform == 'rotateX(1turn) translateY(-110px)') {
-        letter_content.style.animationName = 'test'; 
+        letter_content.style.animationName = 'open-letter'; 
+        btn_container.style.opacity = '1';
+        btn_container.style.transition = 'opacity 500ms 1.5s';
     }
 }
 //#endregion
 
-//#region Change Content
-document.getElementById('arrow-left').addEventListener('click', show_container)
-document.getElementById('arrow-right').addEventListener('click', hide_container);
+//#region Rotate Letter
+document.getElementById('arrow-left').addEventListener('click', letter_to_right);
+document.getElementById('arrow-right').addEventListener('click', letter_to_left);
 
 let arrow_left = document.getElementById('arrow-left');
 let arrow_right = document.getElementById('arrow-right');
-let img_container = document.getElementById('img-container');
+let p_container = document.getElementById('p-container');
+let vid_container = document.getElementById('vid-container');
 
-function hide_container() {
+function letter_to_left() {
     arrow_left.style.opacity = '1';
     arrow_right.style.opacity = '0'
-    img_container.style.transform = 'translateX(-470px)';
-    img_container.style.opacity = '0';
+
+    if (arrow_left.style.opacity == '1') {
+        p_container.style.opacity = '0';
+        letter_content.style.animationName = 'rotate';
+        vid_container.style.animationName = 'rotate';
+    }
 }
 
-function show_container() {
+function letter_to_right() {
     arrow_right.style.opacity = '1';
     arrow_left.style.opacity = '0';
-    if (arrow_left.style.opacity == '0') {
-        img_container.style.transition = 'transform 700ms, opacity 500ms 300ms';
-        img_container.style.opacity = '1';
-        img_container.style.transform = 'translateX(0)';
+
+    if (arrow_right.style.opacity == '1') {
+        p_container.style.opacity = '1';
+        letter_content.style.animationName = 'redo-rotate';
     }
 }
 
