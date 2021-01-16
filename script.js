@@ -9,10 +9,13 @@ let letter = document.getElementById('flex-container');
 let triangle_top = document.getElementById('triangle-top');
 let hearth = document.getElementById('hearth');
 let letter_content = document.getElementById('ctn-letter');
+let first_title = document.getElementById('first');
+let second_title = document.getElementById('second');
 let btn_container = document.getElementById('btn-container');
 
 function open_letter() {
-    letter.style.transform = 'translateY(10px)';
+    first_title.style.opacity = '0';
+    letter.style.transform = 'translateY(40px)';
     triangle_top.style.transition = 'transform 400ms'
     triangle_top.style.zIndex = '6';
     triangle_top.style.transform = 'rotateX(1turn) translateY(-110px)';
@@ -27,7 +30,9 @@ function open_letter() {
     if (triangle_top.style.transform == 'rotateX(1turn) translateY(-110px)') {
         letter_content.style.animationName = 'open-letter'; 
         btn_container.style.opacity = '1';
-        btn_container.style.transition = 'opacity 500ms 1.5s';
+        btn_container.style.transition = 'opacity 500ms 8s';
+        second_title.style.transition = 'opacity 600ms 8s';
+        second_title.style.opacity = '1';
     }
 }
 //#endregion
@@ -47,8 +52,9 @@ function letter_to_left() {
 
     if (arrow_left.style.opacity == '1') {
         p_container.style.opacity = '0';
+        p_container.style.display = 'none';
+        vid_container.style.opacity = '1'
         letter_content.style.animationName = 'rotate';
-        vid_container.style.animationName = 'rotate';
     }
 }
 
@@ -57,8 +63,10 @@ function letter_to_right() {
     arrow_left.style.opacity = '0';
 
     if (arrow_right.style.opacity == '1') {
+        vid_container.style.opacity = '0';
         p_container.style.opacity = '1';
         letter_content.style.animationName = 'redo-rotate';
+        arrow_left.style.transition = 'opacity 900ms 100ms';
     }
 }
 
