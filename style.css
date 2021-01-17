@@ -20,9 +20,10 @@ p {
 .container-all {
     height: 100vh;
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .advice-containerBG {
@@ -169,18 +170,17 @@ p {
 #ctn-letter {
     width: 260px;
     height: 174px;
-    padding: 4px;
+    padding: 4px 4px 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     position: absolute;
     top: 11px;
-    font-size: 20px;
+    font-size: 18px;
     background: #ffffff;
     z-index: 5;
     transition: all 1s;
     animation: 1.5s forwards;
-    overflow: hidden;
 }
 
 #btn-container {
@@ -227,25 +227,10 @@ p {
     margin-bottom: 18px;
 }
 
-#final-container {
-    opacity: 0;
-}
-
-#final-container h3 {
-    display: inline-block;
-    font-weight: 600;
-    font-size: 11px;
-    color: #f10b3d;
-}
-
-.red-hearth {
-    width: 15px;
-    height: 15px;
-    transform: translate(-3px, 3px);
-}
-
 #vid-container {
     height: 100%;
+    padding: 0 4px;
+    position: fixed;
     opacity: 0;
     transition: opacity 500ms 300ms;
     transform: rotateY(0.5turn);
@@ -253,17 +238,43 @@ p {
 
 #vid-container iframe {
     width: 512px;
-    height: 100%;
+    height: 98.6%;
+    padding-bottom: 4px;
 }
 
 #final-container {
-    display: none;
+    width: 100%;
+    padding-bottom: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 500ms 300ms;
+}
+
+#final-container audio {
+    width: 85%;
+}
+
+#final-container h3 {
+    font-size: 0.6em;
+    color: #f10b3d;
+}
+
+.red-hearth {
+    width: 1.1em;
+    height: 1.1em;
+    transform: translate(-3px, 3px);
 }
 
 .title {
-    position: absolute;
+    font-size: 26.5px;
+    position: fixed;
     bottom: 0;
     color: #e0138b;
+    z-index: -1;
 }
 
 #first {
@@ -271,6 +282,10 @@ p {
 }
 
 #second {
+    opacity: 0;
+}
+
+#third {
     opacity: 0;
 }
 
@@ -291,7 +306,7 @@ p {
     70% {
         width: 260px;
         height: 174px;
-        font-size: 20px;
+        font-size: 18px;
         transform: translateY(-112px);
         z-index: 12;
     }
@@ -320,6 +335,7 @@ p {
         font-size: 35px;
         transform: translateY(-112px) rotateY(0.5turn);
         z-index: 12;
+        overflow-y: auto;
     }
 }
 
