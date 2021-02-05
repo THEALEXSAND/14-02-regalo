@@ -1,9 +1,7 @@
 // @ts-check
 
 //#region Open Letter
-document.getElementById('letter').addEventListener('click', open_letter);
-document.getElementById('triangle-top').addEventListener('click', open_letter);
-document.getElementById('hearth').addEventListener('click', open_letter)
+document.getElementById('flex-container').addEventListener('click', open_letter);
 
 let letter = document.getElementById('flex-container');
 let triangle_top = document.getElementById('triangle-top');
@@ -15,10 +13,12 @@ let btn_container = document.getElementById('btn-container');
 let first_title = document.getElementById('first');
 let second_title = document.getElementById('second');
 let third_title = document.getElementById('third');
+let fourth_title = document.getElementById('fourth');
 
 function open_letter() {
     first_title.style.opacity = '0';
-    letter.style.transform = 'translateY(40px)';
+    p_container.style.display = 'block';
+    letter.style.transform = 'translateY(50px)';
     triangle_top.style.transition = 'transform 300ms'
     triangle_top.style.zIndex = '6';
     triangle_top.style.transform = 'rotateX(1turn) translateY(-110px)';
@@ -61,22 +61,27 @@ function show_video_container() {
         p_container.style.opacity = '0';
         vid_container.style.opacity = '1';
         letter_content.style.animationName = 'rotate';
-        third_title.style.transition = 'opacity 600ms 10s';
+        third_title.style.transition = 'opacity 600ms 120s';
         third_title.style.opacity = '1';
 
     }
 }
 
 function hide_video_container() {
-    arrow_right.style.opacity = '1';
-    arrow_left.style.opacity = '0';
+    if (arrow_right.style.opacity == '0') {
+        arrow_right.style.opacity = '0';
+        arrow_left.style.transition = 'opacity 500ms';
+        arrow_left.style.opacity = '0';
+        third_title.style.transition = 'opacity 600ms';
+        third_title.style.opacity = '0';
 
-    if (arrow_right.style.opacity == '1') {
-        vid_container.style.transition = 'opacity 500ms';
+        vid_container.style.transition = 'opacity 400ms';
         vid_container.style.opacity = '0';
         letter_content.style.animationName = 'redo-rotate';
         final_container.style.opacity = '1';
+        fourth_title.style.transition = 'opacity 500ms 30s';
+        fourth_title.style.opacity = '1';
+        
     }
 }
-
 //#endregion

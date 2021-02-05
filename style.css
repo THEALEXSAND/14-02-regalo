@@ -33,7 +33,7 @@ p {
     position: fixed;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     .advice-containerBG {
         width: 100vw;
         height: 100vh;
@@ -184,13 +184,13 @@ p {
 }
 
 #btn-container {
-    width: 670px;
+    width: 635px;
     padding: 2px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    top: 45px;
+    top: 40px;
     opacity: 0;
 }
 
@@ -207,7 +207,7 @@ p {
 
 #arrow-left {
     opacity: 0;
-    transition: opacity 900ms 20s;
+    transition: opacity 900ms 240s;
 }
 
 #arrow-right {
@@ -215,6 +215,7 @@ p {
 }
 
 #p-container {
+    display: none;
     height: 100%;
     padding: 3px 6px;
     font-size: 1em;
@@ -244,6 +245,7 @@ p {
 
 #final-container {
     width: 100%;
+    height: 100%;
     padding-bottom: 4px;
     display: flex;
     flex-wrap: wrap;
@@ -255,26 +257,16 @@ p {
 }
 
 #final-container audio {
-    width: 85%;
+    width: 90%;
+    outline: none;
 }
 
-#final-container h3 {
-    font-size: 0.6em;
-    color: #f10b3d;
-}
-
-.red-hearth {
-    width: 1.1em;
-    height: 1.1em;
-    transform: translate(-3px, 3px);
-}
 
 .title {
-    font-size: 26.5px;
+    font-size: 25px;
     position: fixed;
     bottom: 0;
-    color: #e0138b;
-    z-index: -1;
+    color: #d31082;
 }
 
 #first {
@@ -289,6 +281,16 @@ p {
     opacity: 0;
 }
 
+#fourth {
+    opacity: 0;
+}
+
+.red-hearth {
+    width: 1em;
+    height: 1em;
+    transform: translate(-3px, 3px);
+}
+
 @keyframes open-letter {
     0% {
         transform: translateY(0px);
@@ -299,7 +301,7 @@ p {
     }
     
     65% {
-        transform: translateY(-112px);
+        transform: translateY(-122px);
         z-index: 12;
     }
     
@@ -307,15 +309,15 @@ p {
         width: 260px;
         height: 174px;
         font-size: 18px;
-        transform: translateY(-112px);
+        transform: translateY(-110px);
         z-index: 12;
     }
 
     100% {
         width: 520px;
-        height: 320px;
+        height: 280px;
         font-size: 35px;
-        transform: translateY(-112px);
+        transform: translateY(-110px);
         z-index: 12;
     }
 }
@@ -323,17 +325,17 @@ p {
 @keyframes rotate {
     0% {
         width: 520px;
-        height: 320px;
+        height: 280px;
         font-size: 35px;
-        transform: translateY(-112px);
+        transform: translateY(-110px);
         z-index: 12;
     }
 
     100% {
         width: 520px;
-        height: 320px;
+        height: 280px;
         font-size: 35px;
-        transform: translateY(-112px) rotateY(0.5turn);
+        transform: translateY(-110px) rotateY(0.5turn);
         z-index: 12;
         overflow-y: auto;
     }
@@ -342,17 +344,18 @@ p {
 @keyframes redo-rotate {
     0% {
         width: 520px;
-        height: 320px;
+        height: 280px;
         font-size: 35px;
-        transform: translateY(-112px) rotateY(0.5turn);
+        transform: translateY(-110px) rotateY(0.5turn);
         z-index: 12;
+        overflow-y: auto;
     }
 
     100% {
         width: 520px;
-        height: 320px;
+        height: 280px;
         font-size: 35px;
-        transform: translateY(-112px);
+        transform: translateY(-110px);
         z-index: 12;
     }
 }
