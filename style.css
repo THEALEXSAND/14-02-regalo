@@ -91,7 +91,7 @@ p {
 }
 
 #flex-container:hover {
-    transform: translateY(-25px)
+    transform: translateY(-15px)
 }
 
 #letter {
@@ -190,8 +190,7 @@ p {
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    top: 40px;
-    opacity: 0;
+    opacity: 1;
 }
 
 #btn-container button {
@@ -263,7 +262,7 @@ p {
 
 
 .title {
-    font-size: 25px;
+    font-size: 26px;
     position: fixed;
     bottom: 0;
     color: #d31082;

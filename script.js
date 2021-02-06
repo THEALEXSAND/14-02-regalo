@@ -1,7 +1,9 @@
 // @ts-check
 
 //#region Open Letter
-document.getElementById('flex-container').addEventListener('click', open_letter);
+document.getElementById('letter').addEventListener('click', open_letter);
+document.getElementById('hearth').addEventListener('click', open_letter);
+document.getElementById('triangle-top').addEventListener('click', open_letter);
 
 let letter = document.getElementById('flex-container');
 let triangle_top = document.getElementById('triangle-top');
