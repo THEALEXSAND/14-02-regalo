@@ -79,9 +79,10 @@ function hide_video_container() {
 
         vid_container.style.transition = 'opacity 400ms';
         vid_container.style.opacity = '0';
+        vid_container.style.display = 'none';
         letter_content.style.animationName = 'redo-rotate';
         final_container.style.opacity = '1';
-        fourth_title.style.transition = 'opacity 500ms 45s';
+        fourth_title.style.transition = 'opacity 500ms 50s';
         fourth_title.style.opacity = '1';
         
     }
