@@ -20,7 +20,7 @@ let fourth_title = document.getElementById('fourth');
 function open_letter() {
     first_title.style.opacity = '0';
     p_container.style.display = 'block';
-    letter.style.transform = 'translateY(50px)';
+    letter.style.transform = 'translateY(25px)';
     triangle_top.style.transition = 'transform 300ms'
     triangle_top.style.zIndex = '6';
     triangle_top.style.transform = 'rotateX(1turn) translateY(-110px)';
